@@ -161,7 +161,7 @@ data class AppErrorsInfoBean(
                 isAnr = true,
                 exceptionClassName = "ANR",
                 exceptionMessage = anrInfo?.cause ?: "Application Not Responding",
-                throwFileName = anrInfo?.activity?.flattenToShortString() ?: "unknown",
+                throwFileName = anrInfo?.activity?.toString() ?: "unknown",
                 throwClassName = packageName ?: "unknown",
                 throwMethodName = "unknown",
                 throwLineNumber = -1,
